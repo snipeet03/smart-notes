@@ -5,7 +5,7 @@ import CreateNote from './pages/CreateNote';
 import EditNote from './pages/EditNote';
 
 const App = () => (
-  <div className="min-h-screen bg-slate-50">
+  <div className="min-h-screen bg-oats-bg">
     <Navbar />
     <main>
       <Routes>

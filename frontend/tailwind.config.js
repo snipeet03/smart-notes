@@ -5,14 +5,27 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
       },
       colors: {
         brand: {
-          50: '#f0f4ff',
-          100: '#e0eaff',
-          500: '#4f7aff',
-          600: '#3d6aff',
-          700: '#2d57e8',
+          50: '#f2f6e1',
+          100: '#e6e6df',
+          500: '#5b6f00',
+          600: '#4c5616',
+          700: '#3f4712',
+        },
+        oats: {
+          bg: '#fcfcf9',
+          surface: '#ffffff',
+          sunken: '#f5f5f0',
+          accent: '#5b6f00',
+          'accent-hover': '#4c5616',
+          'accent-light': '#f2f6e1',
+          'ink-primary': '#292929',
+          'ink-secondary': '#72726e',
+          'ink-tertiary': '#acada8',
+          border: '#e6e6df',
         },
       },
       animation: {

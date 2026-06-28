@@ -41,11 +41,15 @@ const Home = () => {
   const isLoading = isSearchMode ? searching : loading;
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-2xl font-bold text-slate-800 mb-1">My Notes</h1>
-        <p className="text-slate-500 text-sm">Organize your thoughts with AI-powered search</p>
+      <div className="mb-10 text-left">
+        <h1 className="text-4xl sm:text-5xl font-serif font-bold tracking-tight text-oats-ink-primary mb-2">
+          My Notes
+        </h1>
+        <p className="text-oats-ink-secondary text-base leading-relaxed max-w-xl">
+          Capturing details, organizing actions, and forming a searchable memory. Powered by semantic AI search.
+        </p>
       </div>
 
       {/* Controls */}
@@ -86,8 +90,8 @@ const Home = () => {
       ) : (
         <>
           {isSearchMode && (
-            <p className="text-sm text-slate-500 mb-4">
-              {results.length} result{results.length !== 1 ? 's' : ''} for <span className="font-medium text-slate-700">"{query}"</span>
+            <p className="text-sm text-oats-ink-secondary mb-5">
+              {results.length} result{results.length !== 1 ? 's' : ''} for <span className="font-semibold text-oats-ink-primary">"{query}"</span>
             </p>
           )}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

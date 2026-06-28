@@ -9,22 +9,22 @@ const DeleteModal = ({ isOpen, onConfirm, onCancel, loading }) => {
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={onCancel} />
 
       {/* Dialog */}
-      <div className="relative bg-white rounded-2xl shadow-xl p-6 max-w-sm w-full animate-fade-in">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="p-2 bg-red-50 rounded-full">
-            <HiOutlineExclamation className="text-red-500 text-xl" />
+      <div className="relative bg-oats-surface rounded-2xl border border-oats-border/80 shadow-2xl p-6 max-w-sm w-full animate-fade-in">
+        <div className="flex items-start gap-4 mb-5">
+          <div className="p-3 bg-red-50 rounded-full text-red-500 shrink-0">
+            <HiOutlineExclamation className="text-2xl" />
           </div>
           <div>
-            <h3 className="font-semibold text-slate-800">Delete note?</h3>
-            <p className="text-sm text-slate-500">This action cannot be undone.</p>
+            <h3 className="font-serif text-lg font-bold text-oats-ink-primary mb-1">Delete Note</h3>
+            <p className="text-sm text-oats-ink-secondary leading-relaxed">This action cannot be undone. The note and its semantic embedding will be permanently removed.</p>
           </div>
         </div>
 
-        <div className="flex gap-3 justify-end">
-          <button onClick={onCancel} className="btn-secondary text-sm" disabled={loading}>
+        <div className="flex gap-2.5 justify-end">
+          <button onClick={onCancel} className="btn-secondary text-xs font-semibold uppercase tracking-wider py-2 px-4" disabled={loading}>
             Cancel
           </button>
-          <button onClick={onConfirm} className="btn-danger text-sm" disabled={loading}>
+          <button onClick={onConfirm} className="btn-danger text-xs font-semibold uppercase tracking-wider py-2 px-4" disabled={loading}>
             {loading ? 'Deleting…' : 'Delete'}
           </button>
         </div>

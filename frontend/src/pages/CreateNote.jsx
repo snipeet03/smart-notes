@@ -24,18 +24,18 @@ const CreateNote = () => {
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
-      <Link to="/" className="inline-flex items-center gap-1 text-sm text-slate-500 hover:text-brand-600 transition-colors mb-6">
-        <HiArrowLeft /> Back
+      <Link to="/" className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-oats-ink-secondary hover:text-oats-accent transition-colors mb-8">
+        <HiArrowLeft className="text-sm" /> Back
       </Link>
 
-      <div className="mb-6">
-        <div className="flex items-center gap-2 mb-1">
-          <h1 className="text-2xl font-bold text-slate-800">New Note</h1>
-          <span className="inline-flex items-center gap-1 text-xs text-indigo-500 bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-100">
-            <HiSparkles /> AI-enhanced
+      <div className="mb-8">
+        <div className="flex items-center gap-2.5 mb-2">
+          <h1 className="text-3xl font-serif font-bold text-oats-ink-primary">New Note</h1>
+          <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-oats-accent bg-oats-accent-light px-2.5 py-0.5 rounded-full border border-oats-accent/20">
+            <HiSparkles className="text-xs" /> AI-enhanced
           </span>
         </div>
-        <p className="text-slate-500 text-sm">An embedding will be generated for semantic search.</p>
+        <p className="text-oats-ink-secondary text-sm">A vector embedding will be generated automatically to enable semantic search.</p>
       </div>
 
       <div className="card">

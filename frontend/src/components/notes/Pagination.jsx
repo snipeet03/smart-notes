@@ -5,19 +5,19 @@ const Pagination = ({ pagination, onPageChange }) => {
   const { page, pages, total } = pagination;
 
   return (
-    <div className="flex items-center justify-between mt-6">
-      <p className="text-sm text-slate-500">
-        Page <span className="font-medium">{page}</span> of <span className="font-medium">{pages}</span>
-        <span className="hidden sm:inline"> · {total} total</span>
+    <div className="flex items-center justify-between mt-10 pt-6 border-t border-oats-border/40">
+      <p className="text-sm text-oats-ink-secondary font-medium">
+        Page <span className="font-semibold text-oats-ink-primary">{page}</span> of <span className="font-semibold text-oats-ink-primary">{pages}</span>
+        <span className="hidden sm:inline"> · {total} notes total</span>
       </p>
 
-      <div className="flex gap-1">
+      <div className="flex gap-1.5 items-center">
         <button
           onClick={() => onPageChange(page - 1)}
           disabled={page <= 1}
-          className="p-2 rounded-lg border border-slate-200 text-slate-600 disabled:opacity-40 hover:border-brand-300 hover:text-brand-600 transition-colors"
+          className="p-2 rounded-full border border-oats-border text-oats-ink-secondary disabled:opacity-30 hover:border-oats-accent/40 hover:text-oats-accent hover:bg-oats-accent-light transition-all flex items-center justify-center w-9 h-9"
         >
-          <HiChevronLeft />
+          <HiChevronLeft className="text-lg" />
         </button>
 
         {Array.from({ length: pages }, (_, i) => i + 1)
@@ -26,10 +26,10 @@ const Pagination = ({ pagination, onPageChange }) => {
             <button
               key={p}
               onClick={() => onPageChange(p)}
-              className={`px-3 py-1 rounded-lg text-sm font-medium border transition-colors ${
+              className={`w-9 h-9 flex items-center justify-center rounded-full text-xs font-bold border transition-all ${
                 p === page
-                  ? 'bg-brand-500 text-white border-brand-500'
-                  : 'border-slate-200 text-slate-600 hover:border-brand-300'
+                  ? 'bg-oats-accent text-white border-oats-accent shadow-sm'
+                  : 'border-oats-border bg-oats-surface text-oats-ink-secondary hover:border-oats-accent/40 hover:text-oats-accent hover:shadow-sm'
               }`}
             >
               {p}
@@ -39,9 +39,9 @@ const Pagination = ({ pagination, onPageChange }) => {
         <button
           onClick={() => onPageChange(page + 1)}
           disabled={page >= pages}
-          className="p-2 rounded-lg border border-slate-200 text-slate-600 disabled:opacity-40 hover:border-brand-300 hover:text-brand-600 transition-colors"
+          className="p-2 rounded-full border border-oats-border text-oats-ink-secondary disabled:opacity-30 hover:border-oats-accent/40 hover:text-oats-accent hover:bg-oats-accent-light transition-all flex items-center justify-center w-9 h-9"
         >
-          <HiChevronRight />
+          <HiChevronRight className="text-lg" />
         </button>
       </div>
     </div>

@@ -11,10 +11,10 @@ const Filters = ({ activeStatus, onChange }) => (
       <button
         key={value}
         onClick={() => onChange(value)}
-        className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors border ${
+        className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-150 border ${
           activeStatus === value
-            ? 'bg-brand-500 text-white border-brand-500'
-            : 'bg-white text-slate-600 border-slate-200 hover:border-brand-300 hover:text-brand-600'
+            ? 'bg-oats-accent text-white border-oats-accent shadow-sm'
+            : 'bg-oats-surface text-oats-ink-secondary border-oats-border hover:border-oats-accent/40 hover:text-oats-accent hover:shadow-sm'
         }`}
       >
         {label}

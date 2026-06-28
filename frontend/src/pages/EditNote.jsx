@@ -59,13 +59,13 @@ const EditNote = () => {
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
-      <Link to="/" className="inline-flex items-center gap-1 text-sm text-slate-500 hover:text-brand-600 transition-colors mb-6">
-        <HiArrowLeft /> Back
+      <Link to="/" className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-oats-ink-secondary hover:text-oats-accent transition-colors mb-8">
+        <HiArrowLeft className="text-sm" /> Back
       </Link>
 
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold text-slate-800 mb-1">Edit Note</h1>
-        <p className="text-slate-500 text-sm">Embedding will be regenerated if title or content changes.</p>
+      <div className="mb-8">
+        <h1 className="text-3xl font-serif font-bold text-oats-ink-primary mb-2">Edit Note</h1>
+        <p className="text-oats-ink-secondary text-sm">The semantic vector embedding will be regenerated if the title or content changes.</p>
       </div>
 
       <div className="card">

@@ -4,32 +4,32 @@
 
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-800 font-sans antialiased;
+    @apply bg-oats-bg text-oats-ink-primary font-sans antialiased;
   }
 }
 
 @layer components {
   .card {
-    @apply bg-white rounded-2xl shadow-sm border border-slate-100 p-5;
+    @apply bg-oats-surface rounded-2xl border border-oats-border/70 p-6 shadow-[0_4px_20px_-4px_rgba(71,67,42,0.05)] transition-all duration-200;
   }
 
   .btn-primary {
-    @apply bg-brand-500 hover:bg-brand-600 text-white font-medium px-4 py-2 rounded-lg transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply bg-oats-accent hover:bg-oats-accent-hover text-white font-medium px-5 py-2.5 rounded-full transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md active:scale-[0.98];
   }
 
   .btn-secondary {
-    @apply bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-4 py-2 rounded-lg transition-colors duration-150;
+    @apply bg-oats-sunken hover:bg-oats-border/40 text-oats-ink-primary font-medium px-5 py-2.5 rounded-full border border-oats-border/50 transition-all duration-150 hover:shadow-sm active:scale-[0.98];
   }
 
   .btn-danger {
-    @apply bg-red-500 hover:bg-red-600 text-white font-medium px-4 py-2 rounded-lg transition-colors duration-150;
+    @apply bg-red-500 hover:bg-red-600 text-white font-medium px-5 py-2.5 rounded-full transition-all duration-150 active:scale-[0.98] shadow-sm;
   }
 
   .input {
-    @apply w-full border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-150 bg-white;
+    @apply w-full border border-oats-border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-4 focus:ring-oats-accent/5 focus:border-oats-accent transition-all duration-150 bg-oats-surface text-oats-ink-primary placeholder:text-oats-ink-tertiary;
   }
 
   .label {
-    @apply block text-sm font-medium text-slate-700 mb-1;
+    @apply block text-[11px] font-bold uppercase tracking-wider text-oats-ink-secondary mb-1.5;
   }
 }
